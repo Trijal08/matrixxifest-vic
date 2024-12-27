@@ -2,16 +2,16 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
-           review="review.lineageos.org" />
+          fetch=".."
+          review="review.lineageos.org" />
 
   <remote  name="private"
-           fetch="ssh://git@github.com" />
+          fetch="ssh://git@github.com" />
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
-           review="android-review.googlesource.com"
-           revision="refs/tags/android-15.0.0_r5" />
+          fetch="https://android.googlesource.com"
+          review="android-review.googlesource.com"
+          revision="refs/tags/android-15.0.0_r5" />
 
   <default revision="refs/heads/lineage-22.0"
            remote="github"
@@ -464,7 +464,7 @@
   <project path="external/renderscript-intrinsics-replacement-toolkit" name="platform/external/renderscript-intrinsics-replacement-toolkit" groups="pdk,sysui-studio" remote="aosp" />
   <project path="external/replicaisland" name="platform/external/replicaisland" groups="pdk" remote="aosp" />
   <project path="external/rmi4utils" name="platform/external/rmi4utils" groups="pdk" remote="aosp" />
-  <project path="external/robolectric" name="platform/external/robolectric" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="aosp" />
+  <project path="external/robolectric" name="LineageOS/android_external_robolectric" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
   <project path="external/roboto-flex-fonts" name="platform/external/roboto-flex-fonts" groups="pdk" remote="aosp" />
   <project path="external/roboto-fonts" name="platform/external/roboto-fonts" groups="pdk" remote="aosp" />
   <project path="external/rootdev" name="platform/external/rootdev" groups="pdk" remote="aosp" />
@@ -1396,8 +1396,7 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
 
+  <include name="snippets/lineage.xml" />
   <include name="snippets/crdroid.xml" />
   <include name="snippets/matrixx.xml" />
-  <include name="snippets/lineage.xml" />
-  <!-- include name="snippets/pixel.xml" / -->
 </manifest>
